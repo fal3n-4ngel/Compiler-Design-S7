@@ -1,3 +1,5 @@
+// Adithya Krishnan S7 CS1
+// Lexical Analyser 
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
@@ -140,3 +142,30 @@ int main() {
     fclose(fp);
     return 0;
 }
+
+// Program Output
+// Keyword : void
+// Keyword : main
+// Special Character : )
+// Special Character : {
+// Keyword : int
+// Identifier: a
+// Value : 1
+// Keyword : int
+// Identifier: bca
+// Value : 0
+// Keyword : printf
+// Identifier: a
+// Special Character : }
+// SYMBOL TABLE
+
+//  0 - a 
+//  1 - bca 
+
+
+// Input File : input.txt
+// void main(){
+//     int a = 1;
+//     int bca=0;
+//     printf(a);
+// }
