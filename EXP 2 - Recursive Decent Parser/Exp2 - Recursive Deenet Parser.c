@@ -1,3 +1,6 @@
+// Adithya Krishnan
+// Recursive Decent Parser
+
 #include <stdio.h>
 #include <ctype.h>
 #include <stdbool.h>
