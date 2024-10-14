@@ -69,7 +69,13 @@ chmod +x build.sh
   ```bash
   sudo apt-get install libfl-dev
   ```
-
+### For NixOs
+- If you get "cannot find -lfl" or "cannot find -ll" errors, you may need to install the Flex development libraries.
+    1. Add flex , bison to config file
+    2. Use nix shell to run the files
+  ```
+  sudo nix-shell -p flex
+  ```
 ## Note
 
 Make sure you have Flex (or Lex) and gcc installed on your system before attempting to compile Lex files.
