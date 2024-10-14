@@ -90,5 +90,5 @@ int main() {
 //$(SS - ) - Reduce S -> a
 //$(S - ) - Reduce S -> SS
 //$(S) -  - shift
-//        $S -  - Reduce S -> (S)
+//$S -  - Reduce S -> (S)
 //ACCEPT
