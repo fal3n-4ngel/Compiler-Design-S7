@@ -1,5 +1,7 @@
 # KTU S7 Compiler Design - Lab
-2024-25
+Mar Baselios College Of Engineering And Technology (2024-25)
+
+This README provides instructions on how to compile and run C programs, Lex files, and integrate Lex with Yacc for the KTU S7 Compiler Design Lab.
 
 ## Compiling and Running C Programs
 
@@ -84,6 +86,29 @@ gcc lex.yy.c
    ./lexer
    ```
 
+## Integrating Lex and Yacc
+
+1. Write your Lex (.l) and Yacc (.y) files.
+2. Generate C files:
+   ```bash
+   flex lexer.l
+   bison -d parser.y
+   ```
+3. Compile the generated C files:
+   ```bash
+   gcc -c lex.yy.c parser.tab.c
+   ```
+4. Link the object files:
+   ```bash
+   gcc lex.yy.o parser.tab.o -o parser -lfl
+   ```
+5. Run the parser:
+   ```bash
+   ./parser
+   ```
+
+For a detailed guide on Lex and Yacc integration, refer to the [Lex-Yacc Integration Guide](link-to-lex-yacc-integration-guide).
+
 ## Troubleshooting
 - For "undefined reference to `yywrap`" error:
   1. Add `%option noyywrap` at the top of your Lex file, or
@@ -97,6 +122,9 @@ gcc lex.yy.c
   ```
 
 ## Note
-Ensure you have Flex (or Lex) and gcc installed on your system before compiling Lex files or C programs.
+Ensure you have Flex (or Lex), Bison (or Yacc), and gcc installed on your system before compiling Lex files, Yacc files, or C programs.
 
-For more information on Flex, visit the [official Flex documentation](https://github.com/westes/flex).
+For more information:
+- [Official Flex documentation](https://github.com/westes/flex)
+- [GNU Bison Manual](https://www.gnu.org/software/bison/manual/)
+
