@@ -1,6 +1,3 @@
-// Adithya Krishnan 
-// Lex 1 - Word Count
-
 %{
     #include <stdio.h>
     int words = 0;
@@ -10,8 +7,8 @@
 
 %%
 \n      { lines++; }
-[a-zA-Z]+ { letters ++; words++; }
-[ \t]+  { /* Ignore whitespace */ }
+[a-zA-Z]+ { letters += yyleng; words++; }
+[[:space:]]+  { /* Ignore whitespace between words */ }
 .       { /* Ignore other characters */ }
 %%
 
